@@ -4,40 +4,7 @@
 
 This MATLAB project simulates the behavior of a spring constant as a function of temperature and time. It includes both linear and nonlinear models for material behavior, specifically incorporating a nonlinear response for temperatures below 0°C. The simulation also accounts for time-dependent degradation of the material properties.
 
-## Overview
 
-The project computes the spring constant using the relation:
-
-\[
-k(T,t) = \frac{E(T,t) \, A(T)}{L(T)}
-\]
-
-with:
-
-- **Temperature Dependence:**
-  - For \( T \ge 0^\circ\text{C} \):
-    \[
-    E(T) = E_0 \left( 1 - \beta (T - T_0) \right)
-    \]
-  - For \( T < 0^\circ\text{C} \) (nonlinear behavior):
-    \[
-    E(T) = E_0 \left( 1 - \beta (T - T_0) \right) \left( 1 + \gamma T^2 \right)
-    \]
-  - Length and cross-sectional area vary linearly with temperature:
-    \[
-    L(T) = L_0 \left( 1 + \alpha (T - T_0) \right)
-    \]
-    \[
-    A(T) = A_0 \left( 1 + 2\alpha (T - T_0) \right)
-    \]
-
-- **Time Dependence:**
-  - The degradation of Young's modulus is modeled as an exponential decay:
-    \[
-    E(T,t) = E(T) \, \exp(-\lambda t)
-    \]
-
-The simulation is executed over a temperature range from -50°C to 150°C and a short time profile (0 to 100 seconds). Multiple temperatures (e.g., -40, -10, 0, 20, 50, 100, 150°C) are used to analyze the time evolution of the spring constant.
 
 ## Files
 
